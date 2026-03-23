@@ -5,7 +5,7 @@
 ## 安装
 
 ```bash
-npx skills add <username>/expert-coding-skills --path skills/security-audit
+npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/security-audit
 ```
 
 ## 使用方式

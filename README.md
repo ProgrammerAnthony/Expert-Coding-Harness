@@ -12,13 +12,13 @@
 
 | 技能 | 描述 | 触发方式 | 安装命令 |
 |------|------|----------|----------|
-| [**代码审查专家**](./skills/code-review-expert/) | 资深工程师视角的结构化代码审查，覆盖 SOLID、安全、性能、边界条件 | `/代码审查` | `npx skills add <username>/expert-coding-skills --path skills/code-review-expert` |
-| [**安全审计专家**](./skills/security-audit/) | 白盒静态分析，10 个安全维度，三种扫描模式 | `/安全审计` | `npx skills add <username>/expert-coding-skills --path skills/security-audit` |
-| [**TDD 开发大师**](./skills/tdd-master/) | 严格 RED-GREEN-REFACTOR，竖向切片，接口设计优先 | `/tdd` | `npx skills add <username>/expert-coding-skills --path skills/tdd-master` |
-| [**需求工程师**](./skills/prd-engineer/) | 访谈驱动的 PRD 编写 + GitHub Issues 拆解 + 实施计划 | `/写PRD` | `npx skills add <username>/expert-coding-skills --path skills/prd-engineer` |
-| [**架构顾问**](./skills/architecture-advisor/) | 全新系统设计或现有架构优化，输出 Mermaid 架构图 | `/架构分析` | `npx skills add <username>/expert-coding-skills --path skills/architecture-advisor` |
-| [**调试专家**](./skills/debug-expert/) | 4 阶段根因分析，系统化排查，完成前强制验证 | `/调试` | `npx skills add <username>/expert-coding-skills --path skills/debug-expert` |
-| [**技能铸造师**](./skills/skill-smith/) | 元技能，指导你创建高质量的 Agent 技能 | `/创建技能` | `npx skills add <username>/expert-coding-skills --path skills/skill-smith` |
+| [**代码审查专家**](./skills/code-review-expert/) | 资深工程师视角的结构化代码审查，覆盖 SOLID、安全、性能、边界条件 | `/代码审查` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/code-review-expert` |
+| [**安全审计专家**](./skills/security-audit/) | 白盒静态分析，10 个安全维度，三种扫描模式 | `/安全审计` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/security-audit` |
+| [**TDD 开发大师**](./skills/tdd-master/) | 严格 RED-GREEN-REFACTOR，竖向切片，接口设计优先 | `/tdd` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/tdd-master` |
+| [**需求工程师**](./skills/prd-engineer/) | 访谈驱动的 PRD 编写 + GitHub Issues 拆解 + 实施计划 | `/写PRD` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/prd-engineer` |
+| [**架构顾问**](./skills/architecture-advisor/) | 全新系统设计或现有架构优化，输出 Mermaid 架构图 | `/架构分析` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/architecture-advisor` |
+| [**调试专家**](./skills/debug-expert/) | 4 阶段根因分析，系统化排查，完成前强制验证 | `/调试` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/debug-expert` |
+| [**技能铸造师**](./skills/skill-smith/) | 元技能，指导你创建高质量的 Agent 技能 | `/创建技能` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/skill-smith` |
 
 ## 快速开始
 
@@ -26,25 +26,25 @@
 
 ```bash
 # 安装代码审查专家
-npx skills add <username>/expert-coding-skills --path skills/code-review-expert
+npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/code-review-expert
 
 # 安装安全审计专家
-npx skills add <username>/expert-coding-skills --path skills/security-audit
+npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/security-audit
 
 # 安装 TDD 开发大师
-npx skills add <username>/expert-coding-skills --path skills/tdd-master
+npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/tdd-master
 
 # 安装需求工程师
-npx skills add <username>/expert-coding-skills --path skills/prd-engineer
+npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/prd-engineer
 
 # 安装架构顾问
-npx skills add <username>/expert-coding-skills --path skills/architecture-advisor
+npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/architecture-advisor
 
 # 安装调试专家
-npx skills add <username>/expert-coding-skills --path skills/debug-expert
+npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/debug-expert
 
 # 安装技能铸造师
-npx skills add <username>/expert-coding-skills --path skills/skill-smith
+npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/skill-smith
 ```
 
 安装后，在 Agent 终端中使用斜杠命令触发：
