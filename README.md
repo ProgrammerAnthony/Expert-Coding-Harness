@@ -3,7 +3,7 @@
 面向中文开发者的生产级 AI Agent 技能集，覆盖代码审查、安全审计、TDD、需求工程、架构设计、调试与技能创建全流程。
 
 <p align="center">
-  <img src="https://img.shields.io/badge/技能数量-7-blue" alt="7 Skills" />
+  <img src="https://img.shields.io/badge/技能数量-9-blue" alt="9 Skills" />
   <img src="https://img.shields.io/badge/语言-中文-red" alt="Chinese" />
   <img src="https://img.shields.io/badge/License-MIT-yellow" alt="MIT License" />
 </p>
@@ -19,6 +19,8 @@
 | [**架构顾问**](./skills/architecture-advisor/) | 全新系统设计或现有架构优化，输出 Mermaid 架构图 | `/架构分析` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/architecture-advisor` |
 | [**调试专家**](./skills/debug-expert/) | 4 阶段根因分析，系统化排查，完成前强制验证 | `/调试` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/debug-expert` |
 | [**技能铸造师**](./skills/skill-smith/) | 元技能，指导你创建高质量的 Agent 技能 | `/创建技能` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/skill-smith` |
+| [**源码阅读分析师**](./skills/source-reading-analyst/) | 三模式（问答/导读/改造建议）源码理解技能，输出带 Mermaid 图的结构化分析报告 | `/源码分析` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/source-reading-analyst` |
+| [**方案设计师**](./skills/brainstorming/) | 实施前的结构化头脑风暴，协作对话澄清需求、对比方案、输出经验证的设计文档 | `/方案设计` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/brainstorming` |
 
 ## 快速开始
 
@@ -45,6 +47,12 @@ npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/debug-expert
 
 # 安装技能铸造师
 npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/skill-smith
+
+# 安装源码阅读分析师
+npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/source-reading-analyst
+
+# 安装方案设计师
+npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/brainstorming
 ```
 
 安装后，在 Agent 终端中使用斜杠命令触发：
@@ -57,6 +65,8 @@ npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/skill-smith
 /架构分析          # 分析或设计系统架构
 /调试             # 系统化调试当前问题
 /创建技能          # 创建一个新的 Agent 技能
+/源码分析          # 阅读、理解并分析现有源码结构
+/方案设计          # 实施前进行结构化头脑风暴与方案设计
 ```
 
 ## 设计理念
