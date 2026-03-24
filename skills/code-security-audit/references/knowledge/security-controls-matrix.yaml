@@ -1,0 +1,104 @@
+# Security Controls Matrix
+# 安全控制矩阵 - 与语言/框架无关的通用定义
+#
+# 核心理念:
+#   - 定义"应该存在什么"，而非"搜索什么危险代码"
+#   - 所有敏感操作都必须有对应的安全控制
+#   - 检测时验证控制是否存在，而非搜索漏洞
+#
+# 版本: 1.0.0
+# 更新: 2026-02-13
+
+# ============================================================================
+# 第一部分: 安全控制定义 (Security Controls Definition)
+# ============================================================================
+security_controls:
+  # 身份认证 - 验证"你是谁"
+  authentication:
+    id: AUTH
+    name: Authentication
+    name_zh: 身份认证
+    description: Verify that user is who they claim to be
+    description_zh: 验证用户身份，确认"你是谁"
+    severity: CRITICAL
+    cwe: CWE-306  # Missing Authentication
+    
+  # 授权检查 - 验证"你能做什么"
+  authorization:
+    id: AUTHZ
+    name: Authorization
+    name_zh: 授权检查
+    description: Verify that user has permission to perform action
+    description_zh: 验证用户权限，确认"你能做什么"
+    severity: CRITICAL
+    cwe: CWE-862  # Missing Authorization
+    
+  # 资源所有权 - 验证"这是你的吗"
+  ownership_check:
+    id: OWNER
+    name: Ownership Check
+    name_zh: 资源所有权验证
+    description: Verify that user owns or has access to specific resource
+    description_zh: 验证资源所有权，防止水平越权
+    severity: HIGH
+    cwe: CWE-639  # Authorization Bypass Through User-Controlled Key
+    
+  # CSRF保护 - 防止跨站请求伪造
+  csrf_protection:
+    id: CSRF
+    name: CSRF Protection
+    name_zh: CSRF保护
+    description: Protect against Cross-Site Request Forgery attacks
+    description_zh: 防止跨站请求伪造攻击
+    severity: HIGH
+    cwe: CWE-352  # Cross-Site Request Forgery
+    
+  # 输入验证 - 验证用户输入
+  input_validation:
+    id: INPUT
+    name: Input Validation
+    name_zh: 输入验证
+    description: Validate and sanitize user input
+    description_zh: 验证和清理用户输入
+    severity: HIGH
+    cwe: CWE-20  # Improper Input Validation
+    
+  # 输出编码 - 防止注入攻击
+  output_encoding:
+    id: OUTPUT
+    name: Output Encoding
+    name_zh: 输出编码
+    description: Encode output to prevent injection attacks
+    description_zh: 对输出进行编码，防止XSS等注入攻击
+    severity: HIGH
+    cwe: CWE-79  # Cross-site Scripting
+    
+  # 审计日志 - 记录敏感操作
+  audit_log:
+    id: AUDIT
+    name: Audit Logging
+    name_zh: 审计日志
+    description: Log sensitive operations for audit trail
+    description_zh: 记录敏感操作，便于审计追踪
+    severity: MEDIUM
+    cwe: CWE-778  # Insufficient Logging
+    
+  # 速率限制 - 防止暴力攻击
+  rate_limit:
+    id: RATE
+    name: Rate Limiting
+    name_zh: 速率限制
+    description: Limit request rate to prevent brute force attacks
+    description_zh: 限制请求频率，防止暴力攻击
+    severity: MEDIUM
+    cwe: CWE-307  # Improper Restriction of Excessive Authentication Attempts
+    
+  # 安全传输 - 使用HTTPS
+  secure_transport:
+    id: TLS
+    name: Secure Transport
+    name_zh: 安全传输
+    description: Use HTTPS to protect data in transit
+    description_zh: 使用 HTTPS 保护数据传输
+    severity: MEDIUM
+    cwe: N/A
