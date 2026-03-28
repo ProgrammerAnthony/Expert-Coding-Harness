@@ -25,6 +25,50 @@
 | [**前端性能优化专家**](./skills/frontend-performance-optimization/) | 基于性能数据的精准瓶颈定位，覆盖 Web Vitals、加载优化、运行时优化、打包体积优化 | `/前端性能优化` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/frontend-performance-optimization` |
 | [**前端代码审查专家**](./skills/frontend-code-review/) | 前端专项代码审查，支持 React/Vue/Next.js/TypeScript，覆盖功能、性能、安全、可维护性六大维度 | `/前端代码审查` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/frontend-code-review` |
 
+## Cursor / Claude Code 配置体系
+
+本项目根目录的 `.cursor/` 目录提供了完整的 Cursor 配置，**克隆仓库即可直接使用，无需额外安装**：
+
+```
+.cursor/
+├── hooks.json          # 自动化 hooks 配置（3 个安全检查）
+├── hooks/              # Cursor hook 适配脚本
+├── rules/              # 永久注入规则（每次对话自动生效）
+│   ├── common-*.md     # 通用规则（编码规范、安全、工作流、Git、测试）
+│   ├── typescript-*.md # TypeScript/JavaScript 专项规则
+│   ├── python-*.md     # Python 专项规则
+│   └── golang-*.md     # Go 专项规则
+└── skills/ → skills/   # 符号链接，所有技能自动可用
+```
+
+### Rules（永久规则）
+
+`alwaysApply: true` 的规则在每次对话中自动生效；语言专项规则（`alwaysApply: false`）仅在匹配对应文件类型时激活：
+
+| 规则文件 | 范围 | 内容 |
+|---------|------|------|
+| `common-coding-style.md` | 全局 | 不可变性、文件组织、错误处理 |
+| `common-security.md` | 全局 | 提交前安全检查、密钥管理 |
+| `common-development-workflow.md` | 全局 | 设计→TDD→审查→提交流水线 |
+| `common-git-workflow.md` | 全局 | Conventional Commits、PR 流程 |
+| `common-testing.md` | 全局 | 80% 覆盖率、TDD 强制工作流 |
+| `common-hooks.md` | 全局 | Hooks 系统说明 |
+| `typescript-*.md` | `*.ts/tsx/js/jsx` | TS 不可变性、Zod 验证、Vitest |
+| `python-*.md` | `*.py/pyi` | PEP8、pytest、ruff、bandit |
+| `golang-*.md` | `*.go` | gofmt、表驱动测试、gosec |
+
+### Hooks（自动化安全检查）
+
+| Hook | 触发时机 | 功能 |
+|------|---------|------|
+| `check-secrets` | 提交提示词前 | 检测 API Key、Token、私钥等敏感凭证 |
+| `warn-sensitive-file` | 读取文件前 | 读取 `.env`、`.key`、`.pem` 等敏感文件时警告 |
+| `post-edit-checks` | 编辑文件后 | 检测 JS/TS 文件中遗留的 `console.log` |
+
+Hooks 同时支持 **Claude Code**（见 [`hooks/hooks.json`](./hooks/hooks.json)）和 **Cursor**（见 [`.cursor/hooks.json`](./.cursor/hooks.json)）。详细说明见 [`hooks/README.md`](./hooks/README.md)。
+
+---
+
 ## 快速开始
 
 使用 `npx skills` 安装任意技能：

@@ -1,0 +1,25 @@
+{
+  "hooks": {
+    "beforeSubmitPrompt": [
+      {
+        "command": "node .cursor/hooks/before-submit-prompt.js",
+        "event": "beforeSubmitPrompt",
+        "description": "提交提示词前检测 API Key / Token 等敏感凭证"
+      }
+    ],
+    "beforeReadFile": [
+      {
+        "command": "node .cursor/hooks/before-read-file.js",
+        "event": "beforeReadFile",
+        "description": "读取 .env/.key/.pem 等敏感文件时发出警告"
+      }
+    ],
+    "afterFileEdit": [
+      {
+        "command": "node .cursor/hooks/after-file-edit.js",
+        "event": "afterFileEdit",
+        "description": "编辑 JS/TS 文件后检查 console.log 语句"
+      }
+    ]
+  }
+}

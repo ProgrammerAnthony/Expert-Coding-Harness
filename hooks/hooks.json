@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node scripts/hooks/warn-sensitive-file.js"
+          }
+        ],
+        "description": "读取 .env/.key/.pem 等敏感文件时发出警告"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node scripts/hooks/post-edit-checks.js"
+          }
+        ],
+        "description": "编辑 JS/TS 文件后检查 console.log 语句"
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node scripts/hooks/check-secrets.js"
+          }
+        ],
+        "description": "每次响应后扫描 transcript 中遗留的 API Key / Token 等敏感凭证"
+      }
+    ]
+  }
+}
