@@ -12,17 +12,17 @@
 
 | 技能 | 描述 | 触发方式 | 安装命令 |
 |------|------|----------|----------|
-| [**代码审查专家**](./skills/code-review-expert/) | 资深工程师视角的结构化代码审查，覆盖 SOLID、安全、性能、边界条件 | `/代码审查` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/code-review-expert` |
+| [**code-review-expert（代码审查专家）**](./skills/code-review-expert/) | 资深工程师视角的结构化代码审查，覆盖 SOLID、安全、性能、边界条件 | `/代码审查` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/code-review-expert` |
 | [**代码安全审计专家**](./skills/code-security-audit/) | 深度数据流分析 + 五阶段审计协议 + 攻击链分析，WooYun 案例库，支持 9 种语言 | `/代码安全审计` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/code-security-audit` |
-| [**TDD 开发大师**](./skills/tdd-master/) | 严格 RED-GREEN-REFACTOR，竖向切片，接口设计优先 | `/tdd` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/tdd-master` |
-| [**需求工程师**](./skills/prd-engineer/) | 访谈驱动的 PRD 编写 + GitHub Issues 拆解 + 实施计划 | `/写PRD` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/prd-engineer` |
+| [**tdd-master（TDD 开发大师）**](./skills/tdd-master/) | 严格 RED-GREEN-REFACTOR，竖向切片，接口设计优先 | `/tdd` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/tdd-master` |
+| [**prd-engineer（需求工程师）**](./skills/prd-engineer/) | 访谈驱动的 PRD 编写 + GitHub Issues 拆解 + 实施计划 | `/写PRD` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/prd-engineer` |
 | [**架构顾问**](./skills/architecture-advisor/) | 全新系统设计或现有架构优化，输出 Mermaid 架构图 | `/架构分析` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/architecture-advisor` |
-| [**调试专家**](./skills/debug-expert/) | 4 阶段根因分析，系统化排查，完成前强制验证 | `/调试` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/debug-expert` |
+| [**debug-expert（调试专家）**](./skills/debug-expert/) | 4 阶段根因分析，系统化排查，完成前强制验证 | `/调试` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/debug-expert` |
 | [**技能铸造师**](./skills/skill-smith/) | 元技能，指导你创建高质量的 Agent 技能 | `/创建技能` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/skill-smith` |
 | [**源码阅读分析师**](./skills/source-reading-analyst/) | 三模式（问答/导读/改造建议）源码理解技能，输出带 Mermaid 图的结构化分析报告 | `/源码分析` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/source-reading-analyst` |
-| [**方案设计师**](./skills/brainstorming/) | 实施前的结构化头脑风暴，协作对话澄清需求、对比方案、输出经验证的设计文档 | `/方案设计` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/brainstorming` |
-| [**实施计划编写**](./skills/writing-plans/) | 在已批准设计后产出可勾选、TDD 粒度、含路径与命令的实施计划 | `/写实施计划` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/writing-plans` |
-| [**子代理驱动开发**](./skills/subagent-driven-development/) | 按书面计划逐任务派发子代理，规格符合性审查通过后做代码质量审查 | `/子代理开发` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/subagent-driven-development` |
+| [**brainstorming（方案设计师）**](./skills/brainstorming/) | 实施前的结构化头脑风暴，协作对话澄清需求、对比方案、输出经验证的设计文档 | `/方案设计` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/brainstorming` |
+| [**writing-plans（实施计划编写）**](./skills/writing-plans/) | 在已批准设计后产出可勾选、TDD 粒度、含路径与命令的实施计划 | `/写实施计划` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/writing-plans` |
+| [**subagent-driven-development（子代理驱动开发）**](./skills/subagent-driven-development/) | 按书面计划逐任务派发子代理，规格符合性审查通过后做代码质量审查 | `/子代理开发` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/subagent-driven-development` |
 | [**React 最佳实践专家**](./skills/react-best-practices/) | React/Next.js 全场景开发指导，覆盖组件设计、Hooks 规范、状态管理选型、性能优化 | `/react最佳实践` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/react-best-practices` |
 | [**前端性能优化专家**](./skills/frontend-performance-optimization/) | 基于性能数据的精准瓶颈定位，覆盖 Web Vitals、加载优化、运行时优化、打包体积优化 | `/前端性能优化` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/frontend-performance-optimization` |
 | [**前端代码审查专家**](./skills/frontend-code-review/) | 前端专项代码审查，支持 React/Vue/Next.js/TypeScript，覆盖功能、性能、安全、可维护性六大维度 | `/前端代码审查` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/frontend-code-review` |
@@ -179,10 +179,44 @@ npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/docs-lookup
 - **确认门控**：关键步骤前必须获得用户确认，不自作主张
 - **防幻觉机制**：要求以代码证据为依据，禁止无中生有
 
+## 技能流水线地图（推荐组合用法）
+
+这部分的目标是把“技能列表”升级为“可交接的流水线”，让你在不同阶段切换技能时更可预测、更少返工。
+
+### 流水线 1：需求/想法 → 设计 → 计划 → 执行 → 收尾
+
+- **需求澄清**：`skills/prd-engineer/`（当你需要 PRD、验收标准、Issues 拆解）
+- **方案设计**：`skills/brainstorming/`（先设计并获得批准）
+- **实施计划**：`skills/writing-plans/`（把批准的设计变成可勾选任务）
+- **按计划执行**：`skills/subagent-driven-development/`（逐任务子代理实现 + 双阶段审查）
+- **最终质量门禁**：`skills/code-review-expert/`
+
+### 流水线 2：问题/错误 → 定位 → 修复 → 验证
+
+- **系统化定位**：`skills/debug-expert/`（先假设清单 + 最小复现，再改代码）
+- **用测试锁住修复**：`skills/tdd-master/`（先写能复现 bug 的测试）
+- **变更收尾**：`skills/code-review-expert/`（确认没有引入新风险）
+
+### 流水线 3：安全审计 → 修复计划 → 执行 → 复审
+
+- **审计（先计划后执行）**：`skills/code-security-audit/`
+- **修复计划**：`skills/writing-plans/`（把漏洞修复拆成可执行步骤）
+- **执行**：`skills/subagent-driven-development/`
+- **复审**：`skills/code-security-audit/`（确认漏洞链路已断）
+
+### 什么时候该“切换技能”
+
+- **你在问“做什么/为什么/成功标准是什么”**：切到 `prd-engineer（需求工程师）` 或 `brainstorming（方案设计师）`
+- **你在问“怎么一步步实现，谁来做也能照着做”**：切到 `writing-plans（实施计划编写）`
+- **你在问“按计划把活干完，并且要审查门禁”**：切到 `subagent-driven-development（子代理驱动开发）`
+- **你在问“这段代码质量/安全/可维护性如何”**：切到 `code-review-expert（代码审查专家）`
+- **你在问“为什么坏了/怎么复现/怎么验证修复”**：切到 `debug-expert（调试专家）`（必要时再接 `tdd-master（TDD 开发大师）`）
+
 ## 致谢
 
 本项目灵感来源于以下优秀开源项目，在此致以诚挚感谢：
 
+- [spec-kit](https://github.com/github/spec-kit) — 提供了 Spec-Driven Development（SDD）的方法论、模板与工具链参考
 - [everything-claude-code](https://github.com/hesreallyhim/everything-claude-code) — 提供了完整的 hooks、rules、skills 配置体系架构的参考思路
 - [Anything-Extract](https://github.com/ProgrammerAnthony/Anything-Extract) — 提供了 TDD、PRD、架构文档等完整技能体系
 - [superpowers](https://github.com/obra/superpowers) — 提供了头脑风暴、系统调试、TDD 铁律等核心工作流思想

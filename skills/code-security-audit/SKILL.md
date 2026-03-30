@@ -12,6 +12,19 @@ description: "Use when 用户需要对代码进行安全审计、发现安全漏
 必须先输出审计计划（技术栈、范围、预计时间、模式），等待用户确认后方可执行。
 </HARD-GATE>
 
+## Inputs / Outputs / Gates / Handoffs（统一契约）
+
+- **Inputs（最小输入）**：目标仓库/目录；技术栈线索（语言/框架/运行方式）；审计范围（模块/commit/接口）；扫描模式（Quick/Standard/Deep）。
+- **Outputs（产物形态）**：审计计划（先）+ 结构化审计报告（后，结构参考 `references/audit-report-template.md`）。
+- **Gates（继续前必须满足）**：
+  - 未经用户确认范围与模式，禁止开始扫描分析（保持与本文件 HARD-GATE 一致）。
+  - 结论必须有代码路径证据链（Source→Sink）；不完整链路必须标为“疑似，需人工验证”。
+  - 通用门控清单可复制使用：`references/quality-gates-checklist.md`。
+- **Handoffs（推荐下游）**：
+  - `writing-plans（实施计划编写）`：输出修复计划
+  - `subagent-driven-development（子代理驱动开发）`：按计划执行修复
+  - `code-security-audit（代码安全审计专家）`：修复后复审
+
 ## 审计方法：三层分析法
 
 | 层次 | 方法 | 目标 |

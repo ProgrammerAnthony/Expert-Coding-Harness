@@ -12,6 +12,19 @@ description: "Use when 程序出现错误、异常、崩溃，或行为与预期
 即便你"知道"原因，也必须先建立假设清单并尝试复现，再动手修改。
 </HARD-GATE>
 
+## Inputs / Outputs / Gates / Handoffs（统一契约）
+
+- **Inputs（最小输入）**：期望 vs 实际；完整错误信息/日志/堆栈；可复现步骤（如有）；最近改动（如有）；运行环境信息（OS/版本/命令）。
+- **Outputs（产物形态）**：一份可交接的调试记录（结构参考 `references/debug-log-template.md`），包含假设清单、最小复现、证据链、验证命令与回归建议。
+- **Gates（继续前必须满足）**：
+  - 未完成“假设清单 + 最小复现”前禁止修改代码（保持与本文件 HARD-GATE 一致）。
+  - 宣称“已修复”前必须运行验证命令并贴出绿色输出或关键结果（保持与本文件后续 HARD-GATE 一致）。
+  - 通用门控清单可复制使用：`../code-review-expert/references/quality-gates-checklist.md`。
+- **Handoffs（推荐下游）**：
+  - `tdd-master（TDD 开发大师）`：先写能复现问题的测试，再修复
+  - `writing-plans（实施计划编写）`：把修复拆成可执行步骤（适合复杂问题）
+  - `code-review-expert（代码审查专家）`：变更后做质量门禁
+
 ## 调试工作流
 
 ### 阶段一：问题理解
