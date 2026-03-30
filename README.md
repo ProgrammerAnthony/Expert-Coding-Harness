@@ -1,9 +1,9 @@
 # Expert Coding Skills
 
-面向中文开发者的生产级 AI Agent 技能集，覆盖代码审查、代码安全审计、TDD、需求工程、架构设计、调试、前端开发与技能创建全流程。
+面向中文开发者的生产级 AI Agent 技能集，覆盖代码审查、代码安全审计、TDD、需求工程、实施计划与子代理编排、架构设计、调试、前端开发与技能创建全流程。
 
 <p align="center">
-  <img src="https://img.shields.io/badge/技能数量-15-blue" alt="15 Skills" />
+  <img src="https://img.shields.io/badge/技能数量-17-blue" alt="17 Skills" />
   <img src="https://img.shields.io/badge/语言-中文-red" alt="Chinese" />
   <img src="https://img.shields.io/badge/License-MIT-yellow" alt="MIT License" />
 </p>
@@ -21,6 +21,8 @@
 | [**技能铸造师**](./skills/skill-smith/) | 元技能，指导你创建高质量的 Agent 技能 | `/创建技能` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/skill-smith` |
 | [**源码阅读分析师**](./skills/source-reading-analyst/) | 三模式（问答/导读/改造建议）源码理解技能，输出带 Mermaid 图的结构化分析报告 | `/源码分析` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/source-reading-analyst` |
 | [**方案设计师**](./skills/brainstorming/) | 实施前的结构化头脑风暴，协作对话澄清需求、对比方案、输出经验证的设计文档 | `/方案设计` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/brainstorming` |
+| [**实施计划编写**](./skills/writing-plans/) | 在已批准设计后产出可勾选、TDD 粒度、含路径与命令的实施计划 | `/写实施计划` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/writing-plans` |
+| [**子代理驱动开发**](./skills/subagent-driven-development/) | 按书面计划逐任务派发子代理，规格符合性审查通过后做代码质量审查 | `/子代理开发` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/subagent-driven-development` |
 | [**React 最佳实践专家**](./skills/react-best-practices/) | React/Next.js 全场景开发指导，覆盖组件设计、Hooks 规范、状态管理选型、性能优化 | `/react最佳实践` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/react-best-practices` |
 | [**前端性能优化专家**](./skills/frontend-performance-optimization/) | 基于性能数据的精准瓶颈定位，覆盖 Web Vitals、加载优化、运行时优化、打包体积优化 | `/前端性能优化` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/frontend-performance-optimization` |
 | [**前端代码审查专家**](./skills/frontend-code-review/) | 前端专项代码审查，支持 React/Vue/Next.js/TypeScript，覆盖功能、性能、安全、可维护性六大维度 | `/前端代码审查` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/frontend-code-review` |
@@ -42,7 +44,7 @@
 │   │   ├── typescript-*.md     # TypeScript/JavaScript 专项规则
 │   │   ├── python-*.md         # Python 专项规则
 │   │   └── golang-*.md         # Go 专项规则
-│   └── skills/                 # 全部 15 个技能（真实目录，内容与 skills/ 一致）
+│   └── skills/                 # 全部 17 个技能（真实目录，内容与 skills/ 一致）
 │
 ├── hooks/                      # Claude Code 配置（仅配置文件）
 │   ├── hooks.json              # Claude Code hooks 配置
@@ -123,6 +125,12 @@ npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/source-readi
 # 安装方案设计师
 npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/brainstorming
 
+# 安装实施计划编写
+npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/writing-plans
+
+# 安装子代理驱动开发
+npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/subagent-driven-development
+
 # 安装 React 最佳实践专家
 npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/react-best-practices
 
@@ -154,6 +162,8 @@ npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/docs-lookup
 /创建技能          # 创建一个新的 Agent 技能
 /源码分析          # 阅读、理解并分析现有源码结构
 /方案设计          # 实施前进行结构化头脑风暴与方案设计
+/写实施计划        # 根据已批准设计编写可执行实施计划
+/子代理开发        # 按实施计划逐任务子代理 + 双阶段审查
 /react最佳实践    # React/Next.js 开发指导、代码规范、性能优化
 /前端性能优化      # 前端页面性能诊断与优化方案
 /前端代码审查      # 前端项目代码质量全维度审查
