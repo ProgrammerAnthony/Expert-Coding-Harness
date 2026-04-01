@@ -12,6 +12,18 @@ description: "Use when 用户要求审查代码、评估代码质量、提交 PR
 不得根据"用户肯定想修复"的假设主动修改代码。
 </HARD-GATE>
 
+## Inputs / Outputs / Gates / Handoffs（统一契约）
+
+- **Inputs（最小输入）**：审查范围（默认：当前 `git diff`；或用户指定 commit/目录）；运行/测试命令（如有）；风险偏好（例如“安全优先/交付优先”）。
+- **Outputs（产物形态）**：结构化审查报告（结构参考 `references/review-report-template.md`）。
+- **Gates（继续前必须满足）**：
+  - 默认只输出报告；**用户明确选择“修复”选项前禁止修改代码**（保持与本文件 HARD-GATE 一致）。
+  - 所有问题必须给证据（文件/行号/调用路径）；不确定要明确标注。
+  - 通用门控清单可复制使用：`references/quality-gates-checklist.md`。
+- **Handoffs（推荐下游）**：
+  - `writing-plans（实施计划编写）`：先写可执行修复计划
+  - `subagent-driven-development（子代理驱动开发）`：按计划逐任务执行
+
 ## 严重度分级
 
 | 级别 | 名称 | 说明 | 处置 |
