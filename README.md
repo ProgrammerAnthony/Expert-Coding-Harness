@@ -29,6 +29,7 @@
 | [**AI Agent 安全专家**](./skills/ai-agent-security/) | AI Agent 安全审计，覆盖提示注入、工具滥用、权限越界等威胁 | `/agent安全审计` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/ai-agent-security` |
 | [**API 设计专家**](./skills/api-design/) | RESTful/GraphQL API 设计规范，覆盖接口设计、版本管理、错误处理 | `/api设计` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/api-design` |
 | [**文档查询**](./skills/docs-lookup/) | 通过 Context7 MCP 获取库和框架的实时最新文档，防止 API 幻觉 | 自动触发 | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/docs-lookup` |
+| [**planning-with-files（文件化规划）**](./skills/planning-with-files/) | Manus 风格三文件规划：`task_plan.md/findings.md/progress.md` + hooks 自动回读与 stop 门禁（适合复杂任务/跨会话） | `/planning-with-files` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/planning-with-files` |
 
 ## Cursor / Claude Code 配置体系
 
@@ -88,6 +89,7 @@
 | `session-end` | `stop` | `Stop` | 保存当前会话摘要到 `~/.claude/` |
 | `pre-compact` | `preCompact` | `PreCompact` | context 压缩前保存状态 |
 | `cost-tracker` | `stop` | `Stop` | 记录 token 用量和费用 |
+| `planning-with-files` | `userPromptSubmit/preToolUse/postToolUse/stop` | — | 三文件规划注入/回读/提醒/未完成门禁（跨会话不丢目标） |
 
 详细说明见 [`hooks/README.md`](./hooks/README.md)。
 
@@ -148,6 +150,9 @@ npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/api-design
 
 # 安装文档查询
 npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/docs-lookup
+
+# 安装文件化规划（planning-with-files）
+npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/planning-with-files
 ```
 
 安装后，在 Agent 终端中使用斜杠命令触发：
@@ -169,6 +174,7 @@ npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/docs-lookup
 /前端代码审查      # 前端项目代码质量全维度审查
 /agent安全审计    # AI Agent 安全威胁分析与防御
 /api设计          # API 接口设计规范与最佳实践
+/planning-with-files # 复杂任务：创建/维护 task_plan.md、findings.md、progress.md
 ```
 
 ## 设计理念
@@ -216,6 +222,7 @@ npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/docs-lookup
 
 本项目灵感来源于以下优秀开源项目，在此致以诚挚感谢：
 
+- [planning-with-files](https://github.com/OthmanAdi/planning-with-files/) — Manus 风格的文件化规划工作流（`task_plan.md/findings.md/progress.md`）与 Cursor hooks 集成参考
 - [spec-kit](https://github.com/github/spec-kit) — 提供了 Spec-Driven Development（SDD）的方法论、模板与工具链参考
 - [everything-claude-code](https://github.com/hesreallyhim/everything-claude-code) — 提供了完整的 hooks、rules、skills 配置体系架构的参考思路
 - [Anything-Extract](https://github.com/ProgrammerAnthony/Anything-Extract) — 提供了 TDD、PRD、架构文档等完整技能体系

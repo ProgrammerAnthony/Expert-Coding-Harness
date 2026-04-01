@@ -313,6 +313,58 @@ async function readStdinJson(options = {}) {
 }
 
 /**
+ * 从 stdin 读取原始文本（用于 hook 输入透传）
+ *
+ * 说明：
+ * - 许多 hooks 的标准做法是：读取 stdin → 尝试解析/处理 → 最终把原始输入写回 stdout
+ * - 这里提供一个统一的 raw reader，避免每个 hook 自己实现一遍
+ *
+ * @param {object} options
+ * @param {number} options.timeoutMs - 超时毫秒数（默认 5000）
+ * @param {number} options.maxSize - 最大读取字节数（默认 1MB）
+ * @returns {Promise<string>} stdin 原始字符串（可能为空字符串）
+ */
+async function readStdin(options = {}) {
+  const { timeoutMs = 5000, maxSize = 1024 * 1024 } = options;
+
+  return new Promise((resolve) => {
+    let data = '';
+    let settled = false;
+
+    const timer = setTimeout(() => {
+      if (settled) return;
+      settled = true;
+      process.stdin.removeAllListeners('data');
+      process.stdin.removeAllListeners('end');
+      process.stdin.removeAllListeners('error');
+      if (process.stdin.unref) process.stdin.unref();
+      resolve(data);
+    }, timeoutMs);
+
+    process.stdin.setEncoding('utf8');
+    process.stdin.on('data', chunk => {
+      if (data.length >= maxSize) return;
+      const remaining = maxSize - data.length;
+      data += chunk.substring(0, remaining);
+    });
+
+    process.stdin.on('end', () => {
+      if (settled) return;
+      settled = true;
+      clearTimeout(timer);
+      resolve(data);
+    });
+
+    process.stdin.on('error', () => {
+      if (settled) return;
+      settled = true;
+      clearTimeout(timer);
+      resolve(data);
+    });
+  });
+}
+
+/**
  * 输出日志到 stderr（AI 会话中对用户可见）
  */
 function log(message) {
@@ -601,6 +653,7 @@ module.exports = {
   stripAnsi,
 
   // Hook I/O
+  readStdin,
   readStdinJson,
   log,
   output,

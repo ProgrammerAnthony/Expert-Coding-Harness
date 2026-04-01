@@ -80,6 +80,32 @@ function runExistingHook(scriptName, stdinData) {
 }
 
 /**
+ * 调用 scripts/hooks/ 下的指定脚本，并捕获 stdout（必要时也可把 stderr 透传到当前进程）。
+ *
+ * 用途：
+ * - Cursor 侧某些 hook 需要“脚本修改后的 JSON”回写到 stdout（例如 userPromptSubmit 注入 prompt）
+ *
+ * @returns {{ ok: boolean, stdout: string }}
+ */
+function runExistingHookCapture(scriptName, stdinData, options = {}) {
+  const scriptPath = path.join(getPluginRoot(), 'scripts', 'hooks', scriptName);
+  const inheritStderr = options.inheritStderr === true;
+
+  try {
+    const out = execFileSync(process.execPath, [scriptPath], {
+      input: typeof stdinData === 'string' ? stdinData : JSON.stringify(stdinData),
+      stdio: ['pipe', 'pipe', inheritStderr ? 'inherit' : 'pipe'],
+      timeout: 15000,
+      cwd: process.cwd(),
+    });
+    return { ok: true, stdout: String(out) };
+  } catch (e) {
+    if (e && e.status === 2) process.exit(2);
+    return { ok: false, stdout: '' };
+  }
+}
+
+/**
  * 判断指定 hook 在当前环境配置下是否应当执行。
  *
  * 环境变量：
@@ -101,4 +127,4 @@ function hookEnabled(hookId, allowedProfiles = ['standard', 'strict']) {
   return allowedProfiles.includes(profile);
 }
 
-module.exports = { readStdin, getPluginRoot, transformToClaude, runExistingHook, hookEnabled };
+module.exports = { readStdin, getPluginRoot, transformToClaude, runExistingHook, runExistingHookCapture, hookEnabled };

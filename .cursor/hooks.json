@@ -1,5 +1,28 @@
 {
   "hooks": {
+    "userPromptSubmit": [
+      {
+        "command": "node .cursor/hooks/user-prompt-submit.js",
+        "event": "userPromptSubmit",
+        "description": "Inject planning-with-files plan summary into prompt (task_plan.md + progress.md)"
+      }
+    ],
+    "preToolUse": [
+      {
+        "command": "node .cursor/hooks/pre-tool-use.js",
+        "event": "preToolUse",
+        "description": "Re-read task_plan.md head before tool calls (planning-with-files)",
+        "matcher": "Write|Edit|Shell|Read|Glob|Grep"
+      }
+    ],
+    "postToolUse": [
+      {
+        "command": "node .cursor/hooks/post-tool-use.js",
+        "event": "postToolUse",
+        "description": "Remind updating progress.md & phase status after edits (planning-with-files)",
+        "matcher": "Write|Edit"
+      }
+    ],
     "sessionStart": [
       {
         "command": "node .cursor/hooks/session-start.js",
@@ -102,7 +125,8 @@
       {
         "command": "node .cursor/hooks/stop.js",
         "event": "stop",
-        "description": "Console.log audit, session save, cost tracking"
+        "description": "Planning gate + console.log audit, session save, cost tracking",
+        "loop_limit": 3
       }
     ]
   }
