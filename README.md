@@ -1,6 +1,6 @@
 # Expert Coding Skills
 
-面向中文开发者的生产级 AI Agent 技能集，覆盖代码审查、代码安全审计、TDD、需求工程、实施计划与子代理编排、架构设计、调试、前端开发与技能创建全流程。
+面向中文开发者的生产级 AI Agent 技能集，辅助AI Harness应用于企业开发，覆盖代码审查、代码安全审计、TDD、需求工程、实施计划与子代理编排、架构设计、调试、前端开发与技能创建全流程。
 
 <p align="center">
   <img src="https://img.shields.io/badge/技能数量-17-blue" alt="17 Skills" />
