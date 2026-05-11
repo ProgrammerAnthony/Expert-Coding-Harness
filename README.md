@@ -1,9 +1,9 @@
-# Expert Coding Skills
+# Expert Coding Harness
 
-生产级 AI Agent 技能集，辅助AI Harness应用于企业开发，覆盖代码审查、代码安全审计、TDD、需求工程、实施计划与子代理编排、架构设计、调试、前端开发与技能创建全流程。
+生产级 AI Agent 技能集，覆盖代码审查、代码安全审计、TDD、需求工程、实施计划与子代理编排、架构设计、调试、前端开发、原型验证、面试知识追踪与技能创建全流程。
 
 <p align="center">
-  <img src="https://img.shields.io/badge/技能数量-17-blue" alt="17 Skills" />
+  <img src="https://img.shields.io/badge/技能数量-25-blue" alt="25 Skills" />
   <img src="https://img.shields.io/badge/语言-中文-red" alt="Chinese" />
   <img src="https://img.shields.io/badge/License-MIT-yellow" alt="MIT License" />
 </p>
@@ -12,24 +12,31 @@
 
 | 技能 | 描述 | 触发方式 | 安装命令 |
 |------|------|----------|----------|
-| [**code-review-expert（代码审查专家）**](./skills/code-review-expert/) | 资深工程师视角的结构化代码审查，覆盖 SOLID、安全、性能、边界条件 | `/代码审查` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/code-review-expert` |
-| [**代码安全审计专家**](./skills/code-security-audit/) | 深度数据流分析 + 五阶段审计协议 + 攻击链分析，WooYun 案例库，支持 9 种语言 | `/代码安全审计` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/code-security-audit` |
-| [**tdd-master（TDD 开发大师）**](./skills/tdd-master/) | 严格 RED-GREEN-REFACTOR，竖向切片，接口设计优先 | `/tdd` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/tdd-master` |
-| [**prd-engineer（需求工程师）**](./skills/prd-engineer/) | 访谈驱动的 PRD 编写 + GitHub Issues 拆解 + 实施计划 | `/写PRD` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/prd-engineer` |
-| [**架构顾问**](./skills/architecture-advisor/) | 全新系统设计或现有架构优化，输出 Mermaid 架构图 | `/架构分析` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/architecture-advisor` |
-| [**debug-expert（调试专家）**](./skills/debug-expert/) | 4 阶段根因分析，系统化排查，完成前强制验证 | `/调试` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/debug-expert` |
-| [**技能铸造师**](./skills/skill-smith/) | 元技能，指导你创建高质量的 Agent 技能 | `/创建技能` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/skill-smith` |
-| [**源码阅读分析师**](./skills/source-reading-analyst/) | 三模式（问答/导读/改造建议）源码理解技能，输出带 Mermaid 图的结构化分析报告 | `/源码分析` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/source-reading-analyst` |
-| [**brainstorming（方案设计师）**](./skills/brainstorming/) | 实施前的结构化头脑风暴，协作对话澄清需求、对比方案、输出经验证的设计文档 | `/方案设计` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/brainstorming` |
-| [**writing-plans（实施计划编写）**](./skills/writing-plans/) | 在已批准设计后产出可勾选、TDD 粒度、含路径与命令的实施计划 | `/写实施计划` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/writing-plans` |
-| [**subagent-driven-development（子代理驱动开发）**](./skills/subagent-driven-development/) | 按书面计划逐任务派发子代理，规格符合性审查通过后做代码质量审查 | `/子代理开发` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/subagent-driven-development` |
-| [**React 最佳实践专家**](./skills/react-best-practices/) | React/Next.js 全场景开发指导，覆盖组件设计、Hooks 规范、状态管理选型、性能优化 | `/react最佳实践` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/react-best-practices` |
-| [**前端性能优化专家**](./skills/frontend-performance-optimization/) | 基于性能数据的精准瓶颈定位，覆盖 Web Vitals、加载优化、运行时优化、打包体积优化 | `/前端性能优化` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/frontend-performance-optimization` |
-| [**前端代码审查专家**](./skills/frontend-code-review/) | 前端专项代码审查，支持 React/Vue/Next.js/TypeScript，覆盖功能、性能、安全、可维护性六大维度 | `/前端代码审查` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/frontend-code-review` |
-| [**AI Agent 安全专家**](./skills/ai-agent-security/) | AI Agent 安全审计，覆盖提示注入、工具滥用、权限越界等威胁 | `/agent安全审计` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/ai-agent-security` |
-| [**API 设计专家**](./skills/api-design/) | RESTful/GraphQL API 设计规范，覆盖接口设计、版本管理、错误处理 | `/api设计` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/api-design` |
-| [**文档查询**](./skills/docs-lookup/) | 通过 Context7 MCP 获取库和框架的实时最新文档，防止 API 幻觉 | 自动触发 | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/docs-lookup` |
-| [**planning-with-files（文件化规划）**](./skills/planning-with-files/) | Manus 风格三文件规划：`task_plan.md/findings.md/progress.md` + hooks 自动回读与 stop 门禁（适合复杂任务/跨会话） | `/planning-with-files` | `npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/planning-with-files` |
+| [**code-review-expert（代码审查专家）**](./skills/code-review-expert/) | 资深工程师视角的结构化代码审查，覆盖 SOLID、安全、性能、边界条件 | `/code-review-expert` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/code-review-expert` |
+| [**code-security-audit（代码安全审计专家）**](./skills/code-security-audit/) | 深度数据流分析 + 五阶段审计协议 + 攻击链分析，WooYun 案例库，支持 9 种语言 | `/code-security-audit` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/code-security-audit` |
+| [**tdd-master（TDD 开发大师）**](./skills/tdd-master/) | 严格 RED-GREEN-REFACTOR，竖向切片，接口设计优先 | `/tdd-master` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/tdd-master` |
+| [**prd-engineer（需求工程师）**](./skills/prd-engineer/) | 访谈驱动的 PRD 编写 + GitHub Issues 拆解 + 实施计划 | `/prd-engineer` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/prd-engineer` |
+| [**architecture-advisor（架构顾问）**](./skills/architecture-advisor/) | 全新系统设计或现有架构优化，输出 Mermaid 架构图 | `/architecture-advisor` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/architecture-advisor` |
+| [**debug-expert（调试专家）**](./skills/debug-expert/) | 4 阶段根因分析，系统化排查，完成前强制验证 | `/debug-expert` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/debug-expert` |
+| [**skill-smith（技能铸造师）**](./skills/skill-smith/) | 元技能，指导你创建高质量的 Agent 技能 | `/skill-smith` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/skill-smith` |
+| [**source-reading-analyst（源码阅读分析师）**](./skills/source-reading-analyst/) | 三模式（问答/导读/改造建议）源码理解技能，输出带 Mermaid 图的结构化分析报告 | `/source-reading-analyst` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/source-reading-analyst` |
+| [**brainstorming（方案设计师）**](./skills/brainstorming/) | 实施前的结构化头脑风暴，协作对话澄清需求、对比方案、输出经验证的设计文档 | `/brainstorming` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/brainstorming` |
+| [**writing-plans（实施计划编写）**](./skills/writing-plans/) | 在已批准设计后产出可勾选、TDD 粒度、含路径与命令的实施计划 | `/writing-plans` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/writing-plans` |
+| [**subagent-driven-development（子代理驱动开发）**](./skills/subagent-driven-development/) | 按书面计划逐任务派发子代理，规格符合性审查通过后做代码质量审查 | `/subagent-driven-development` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/subagent-driven-development` |
+| [**react-best-practices（React 最佳实践专家）**](./skills/react-best-practices/) | React/Next.js 全场景开发指导，覆盖组件设计、Hooks 规范、状态管理选型、性能优化 | `/react-best-practices` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/react-best-practices` |
+| [**frontend-performance-optimization（前端性能优化专家）**](./skills/frontend-performance-optimization/) | 基于性能数据的精准瓶颈定位，覆盖 Web Vitals、加载优化、运行时优化、打包体积优化 | `/frontend-performance-optimization` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/frontend-performance-optimization` |
+| [**frontend-code-review（前端代码审查专家）**](./skills/frontend-code-review/) | 前端专项代码审查，支持 React/Vue/Next.js/TypeScript，覆盖功能、性能、安全、可维护性六大维度 | `/frontend-code-review` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/frontend-code-review` |
+| [**ai-agent-security（AI Agent 安全专家）**](./skills/ai-agent-security/) | AI Agent 安全审计，覆盖提示注入、工具滥用、权限越界等威胁 | `/ai-agent-security` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/ai-agent-security` |
+| [**api-design（API 设计专家）**](./skills/api-design/) | RESTful/GraphQL API 设计规范，覆盖接口设计、版本管理、错误处理 | `/api-design` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/api-design` |
+| [**docs-lookup（文档查询）**](./skills/docs-lookup/) | 通过 Context7 MCP 获取库和框架的实时最新文档，防止 API 幻觉 | auto-triggered | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/docs-lookup` |
+| [**planning-with-files（文件化规划）**](./skills/planning-with-files/) | Manus 风格三文件规划：`task_plan.md/findings.md/progress.md` + hooks 自动回读与 stop 门禁（适合复杂任务/跨会话） | `/planning-with-files` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/planning-with-files` |
+| [**interview-knowledge-track（面试知识点追踪）**](./skills/interview-knowledge-track/) | 三阶段面试知识点追踪：知识点拆分（KB-INDEX）、按主题检索（opensource + interview-drill）、经历绑定的架构与面试 Markdown 输出 | `/interview-knowledge-track` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/interview-knowledge-track` |
+| [**llm-wiki-interview（LLM Wiki 面试库）**](./skills/llm-wiki-interview/) | 面试向 LLM Wiki 全流程：Raw 层沉淀研究资料，Wiki 层编译维护实体/概念/索引，支持博客收录与知识库 lint | `/llm-wiki-interview` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/llm-wiki-interview` |
+| [**prototype（原型验证）**](./skills/prototype/) | 一次性原型驱动设计验证：逻辑/状态模型用终端交互 App，UI 方案用多变体路由切换，答完即删 | `/prototype` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/prototype` |
+| [**handoff（会话交接）**](./skills/handoff/) | 将当前对话压缩为结构化交接文档，供下一个 Agent 会话接续工作 | `/handoff` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/handoff` |
+| [**grill-me（深度追问）**](./skills/grill-me/) | 对计划或设计进行不留情面的逐分支追问，每次只问一个问题并给出推荐答案，直至达成共同理解 | `/grill-me` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/grill-me` |
+| [**caveman（极简通信模式）**](./skills/caveman/) | 去掉所有废话和客套，保留完整技术内容，削减约 75% token 用量 | `/caveman` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/caveman` |
+| [**improve-codebase-architecture（代码库架构深化）**](./skills/improve-codebase-architecture/) | 发现浅模块并提出深化重构机会，提升可测试性与 AI 可导航性；与 architecture-advisor 互补（一个设计新架构，一个改善现有代码） | `/improve-codebase-architecture` | `npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/improve-codebase-architecture` |
 
 ## Cursor / Claude Code 配置体系
 
@@ -45,7 +52,7 @@
 │   │   ├── typescript-*.md     # TypeScript/JavaScript 专项规则
 │   │   ├── python-*.md         # Python 专项规则
 │   │   └── golang-*.md         # Go 专项规则
-│   └── skills/                 # 全部 17 个技能（真实目录，内容与 skills/ 一致）
+│   └── skills/                 # 全部 25 个技能（真实目录，内容与 skills/ 一致）
 │
 ├── hooks/                      # Claude Code 配置（仅配置文件）
 │   ├── hooks.json              # Claude Code hooks 配置
@@ -101,80 +108,108 @@
 
 ```bash
 # 安装代码审查专家
-npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/code-review-expert
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/code-review-expert
 
 # 安装代码安全审计专家
-npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/code-security-audit
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/code-security-audit
 
 # 安装 TDD 开发大师
-npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/tdd-master
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/tdd-master
 
 # 安装需求工程师
-npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/prd-engineer
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/prd-engineer
 
 # 安装架构顾问
-npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/architecture-advisor
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/architecture-advisor
 
 # 安装调试专家
-npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/debug-expert
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/debug-expert
 
 # 安装技能铸造师
-npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/skill-smith
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/skill-smith
 
 # 安装源码阅读分析师
-npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/source-reading-analyst
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/source-reading-analyst
 
 # 安装方案设计师
-npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/brainstorming
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/brainstorming
 
 # 安装实施计划编写
-npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/writing-plans
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/writing-plans
 
 # 安装子代理驱动开发
-npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/subagent-driven-development
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/subagent-driven-development
 
 # 安装 React 最佳实践专家
-npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/react-best-practices
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/react-best-practices
 
 # 安装前端性能优化专家
-npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/frontend-performance-optimization
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/frontend-performance-optimization
 
 # 安装前端代码审查专家
-npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/frontend-code-review
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/frontend-code-review
 
 # 安装 AI Agent 安全专家
-npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/ai-agent-security
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/ai-agent-security
 
 # 安装 API 设计专家
-npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/api-design
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/api-design
 
 # 安装文档查询
-npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/docs-lookup
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/docs-lookup
 
 # 安装文件化规划（planning-with-files）
-npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/planning-with-files
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/planning-with-files
+
+# 安装面试知识点追踪
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/interview-knowledge-track
+
+# 安装 LLM Wiki 面试库
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/llm-wiki-interview
+
+# 安装原型验证
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/prototype
+
+# 安装会话交接
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/handoff
+
+# 安装深度追问
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/grill-me
+
+# 安装极简通信模式
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/caveman
+
+# 安装代码库架构深化
+npx skills add ProgrammerAnthony/Expert-Coding-Harness --path skills/improve-codebase-architecture
 ```
 
 安装后，在 Agent 终端中使用斜杠命令触发：
 
 ```
-/代码审查          # 审查当前 git 变更
-/代码安全审计      # 深度白盒代码安全审计（五阶段协议）
-/tdd              # 启动 TDD 开发流程
-/写PRD            # 编写产品需求文档
-/架构分析          # 分析或设计系统架构
-/调试             # 系统化调试当前问题
-/创建技能          # 创建一个新的 Agent 技能
-/源码分析          # 阅读、理解并分析现有源码结构
-/方案设计          # 实施前进行结构化头脑风暴与方案设计
-/写实施计划        # 根据已批准设计编写可执行实施计划
-/子代理开发        # 按实施计划逐任务子代理 + 双阶段审查
-/react最佳实践    # React/Next.js 开发指导、代码规范、性能优化
-/前端性能优化      # 前端页面性能诊断与优化方案
-/前端代码审查      # 前端项目代码质量全维度审查
-/agent安全审计    # AI Agent 安全威胁分析与防御
-/api设计          # API 接口设计规范与最佳实践
-/planning-with-files # 复杂任务：创建/维护 task_plan.md、findings.md、progress.md
+/code-review-expert              # 审查当前 git 变更
+/code-security-audit             # 深度白盒代码安全审计（五阶段协议）
+/tdd-master                      # 启动 TDD 开发流程
+/prd-engineer                    # 编写产品需求文档
+/architecture-advisor            # 分析或设计系统架构
+/debug-expert                    # 系统化调试当前问题
+/skill-smith                     # 创建一个新的 Agent 技能
+/source-reading-analyst          # 阅读、理解并分析现有源码结构
+/brainstorming                   # 实施前进行结构化头脑风暴与方案设计
+/writing-plans                   # 根据已批准设计编写可执行实施计划
+/subagent-driven-development     # 按实施计划逐任务子代理 + 双阶段审查
+/react-best-practices            # React/Next.js 开发指导、代码规范、性能优化
+/frontend-performance-optimization  # 前端页面性能诊断与优化方案
+/frontend-code-review            # 前端项目代码质量全维度审查
+/ai-agent-security               # AI Agent 安全威胁分析与防御
+/api-design                      # API 接口设计规范与最佳实践
+/planning-with-files             # 复杂任务：创建/维护 task_plan.md、findings.md、progress.md
+/interview-knowledge-track       # 面试知识点追踪三阶段流程
+/llm-wiki-interview              # LLM Wiki 面试知识库全流程管理
+/prototype                       # 快速验证设计（逻辑终端 App / UI 多变体路由）
+/handoff                         # 将当前会话压缩为下一个 Agent 的交接文档
+/grill-me                        # 对计划进行不留情面的逐分支深度追问
+/caveman                         # 开启极简通信模式，削减约 75% token 用量
+/improve-codebase-architecture   # 发现浅模块并提出深化重构机会
 ```
 
 ## 设计理念
@@ -228,6 +263,8 @@ npx skills add ProgrammerAnthony/Expert-Coding-Skills --path skills/planning-wit
 - [Anything-Extract](https://github.com/ProgrammerAnthony/Anything-Extract) — 提供了 TDD、PRD、架构文档等完整技能体系
 - [superpowers](https://github.com/obra/superpowers) — 提供了头脑风暴、系统调试、TDD 铁律等核心工作流思想
 - [skill-dfyx_code_security_review](https://github.com/EastSword/skill-dfyx_code_security_review) — 提供了专业的代码安全审计方法论
+- [mattpocock/skills](https://github.com/mattpocock/skills) — 提供了 prototype、handoff、grill-me、caveman、improve-codebase-architecture 等核心工程技能的设计思路
+- [oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) — Teams-first 多智能体编排框架，提供了 hooks、skills 与多 Agent 协作模式的参考思路
 
 本项目所有技能内容均为独立的中文原创实现，基于上述项目的思想进行了重新设计与功能增强。
 
