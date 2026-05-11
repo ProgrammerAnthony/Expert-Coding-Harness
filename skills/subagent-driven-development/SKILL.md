@@ -128,4 +128,4 @@ flowchart TD
 全部完成后 → 可选：Task 最终审查 → 用户确认合并
 ```
 
-更多叙事化示例见 superpowers 上游项目中的同名技能；本仓库为中文流程与 `code-review-expert（代码审查专家）` 对齐版。
+
