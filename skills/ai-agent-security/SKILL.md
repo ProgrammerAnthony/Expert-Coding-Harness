@@ -173,6 +173,26 @@ def verify_facts(output: str, knowledge_base: List[str]) -> dict:
 ```
 
 ### 3. 执行层防护
+
+#### 可选：HOL Guard 本地运行时边界
+对于支持的本地编码 Agent harness，可在高风险工具调用前使用 HOL Guard 作为额外的运行时保护层。HOL Guard 不替代现有的身份验证、权限控制、人工确认、代码审查或目标系统的服务端安全机制。
+
+```bash
+pipx install hol-guard
+hol-guard --version
+hol-guard detect --json
+hol-guard bootstrap
+hol-guard install <harness>
+hol-guard run <harness> --dry-run
+hol-guard run <harness>
+hol-guard doctor <harness> --json
+hol-guard status
+```
+
+`<harness>` 必须使用 `hol-guard detect --json` 返回的准确标识，不要维护或猜测另一份支持列表。如果 Guard 拒绝、要求审核、报错、超时，或无法证明保护状态，应停止相关变更操作，不能退回未受保护的 Agent 继续执行。
+
+HOL Guard 只声明保护其支持的本地 Agent harness，不表示它运行在第三方服务端环境中。
+
 #### 代码执行沙箱
 ```python
 import subprocess
